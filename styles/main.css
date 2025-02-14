@@ -47,6 +47,13 @@ button {
 
 /* стиили для карточек */
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .to__do__mem {
   display: flex;
   flex-direction: column;

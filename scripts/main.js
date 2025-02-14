@@ -14,28 +14,30 @@ addBtn.addEventListener("click", () => {
   }
 });
 
-const createCard = (img, text) => {
-  let todoMem = document.createElement("div");
-  todoMem.className = "to__do__mem";
-  todoMem.insertAdjacentHTML(
-    "beforeend",
-    `
-        <span class="icon like__card"></span>
-        <img class="img__card" src="${img}"></img>
-        <span class="text__card">${text}</span>
-        <span class="icon delete__card"></span>
-    `
-  );
+createCard = (img, text) => {
+  let pattern = document.querySelector("template");
+  let clone = pattern.content.cloneNode(true);
+  let todoMem = clone.querySelector(".to__do__mem");
+  let imgCard = todoMem.querySelector(".img__card");
+  let textCard = todoMem.querySelector(".text__card");
 
-  document.body.appendChild(todoMem);
+  imgCard.src = img;
+  textCard.textContent = text;
 
+  document.querySelector("body").appendChild(clone);
+  deleteCard(todoMem);
+  like(todoMem);
+};
+
+like = (todoMem) => {
   let likeCard = todoMem.querySelector(".like__card");
-  let deleteCard = todoMem.querySelector(".delete__card");
-
   likeCard.addEventListener("click", () => {
     likeCard.classList.toggle("liked");
   });
+};
 
+deleteCard = (todoMem) => {
+  let deleteCard = todoMem.querySelector(".delete__card");
   deleteCard.addEventListener("click", () => {
     todoMem.remove();
   });
