@@ -1,3 +1,5 @@
+import './styles/style.css';
+
 //добавление картинки
 const inputImg = document.querySelector("#input__img");
 const inputText = document.querySelector("#input__text");
@@ -14,7 +16,7 @@ addBtn.addEventListener("click", () => {
   }
 });
 
-createCard = (img, text) => {
+const createCard = (img, text) => {
   let pattern = document.querySelector("template");
   let clone = pattern.content.cloneNode(true);
   let todoMem = clone.querySelector(".to__do__mem");
@@ -29,16 +31,18 @@ createCard = (img, text) => {
   like(todoMem);
 };
 
-like = (todoMem) => {
+const like = (todoMem) => {
   let likeCard = todoMem.querySelector(".like__card");
   likeCard.addEventListener("click", () => {
     likeCard.classList.toggle("liked");
   });
 };
 
-deleteCard = (todoMem) => {
+const deleteCard = (todoMem) => {
   let deleteCard = todoMem.querySelector(".delete__card");
   deleteCard.addEventListener("click", () => {
     todoMem.remove();
   });
 };
+
+
