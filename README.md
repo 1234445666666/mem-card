@@ -23,7 +23,7 @@ npm run build
 
 ## Структура проекта
 ```
-mem-card-2/
+mem-card/
 ├── src/
 │   ├── index.js         # Основной скрипт
 │   ├── styles/         # Стили CSS
