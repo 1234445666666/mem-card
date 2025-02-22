@@ -23,15 +23,22 @@ npm run build
 
 ## Структура проекта
 ```
-mem-card/
-├── src/
-│   ├── index.js         # Основной скрипт
-│   ├── styles/         # Стили CSS
-│   ├── assets/         # Иконки и изображения
-├── dist/               # Финальная сборка
-├── package.json        # Конфигурация npm
-├── webpack.config.js   # Конфигурация Webpack
-└── README.md           # Этот файл
+/project-root
+│── dist/                  # Скомпилированные файлы
+│── node_modules/          # Установленные зависимости
+│── src/                   # Исходный код
+│   ├── assets/            # Ресурсы (изображения, иконки и т. д.)
+│   ├── styles/            # CSS-стили
+│   ├── index.html         # Основной HTML-файл
+│   ├── index.js           # Главный JS-файл
+│── .babelrc               # Конфиг Babel
+│── .gitignore             # Файлы, игнорируемые Git
+│── package-lock.json      # Зафиксированные версии пакетов
+│── package.json           # Настройки проекта и зависимости
+│── postcss.config.js      # Конфиг PostCSS
+│── README.md              # Документация проекта
+│── webpack.config.js      # Конфигурация Webpack
+
 ```
 
 ## Используемые технологии
@@ -42,4 +49,5 @@ mem-card/
 
 ## Контакты
 [GitHub Репозиторий](https://github.com/1234445666666/mem-card)
+
 
