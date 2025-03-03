@@ -23,7 +23,7 @@ npm run build
 
 ## Структура проекта
 ```
-/project-root
+/project-rootv
 │── dist/                  # Скомпилированные файлы
 │── node_modules/          # Установленные зависимости
 │── src/                   # Исходный код
