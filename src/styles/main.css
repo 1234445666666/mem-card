@@ -1,126 +1,59 @@
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70vh;
-}
-
-.add__card {
+/* Стили для формы добавления карточки */
+#formMem {
+  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-input {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  width: 300px;
-  border: none;
-  border: 2px solid #d19bc8;
-  background-color: transparent;
-  color: #d19bc8;
-  &:focus {
-    outline: none;
-    border: 2px solid #d19bc8;
-    color: #d19bc8;
-  }
-}
-
-button {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  width: 300px;
-  border: none;
-  border: 2px solid #d19bc8;
-  background-color: transparent;
-  color: #d19bc8;
-
-  &:hover {
-    cursor: pointer;
-    background-color: #d19bc8;
-    color: #fff;
-  }
-}
-
-/* стиили для карточек */
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.to__do__mem {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #d19bc8;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  width: 300px;
-  height: 400px;
-}
-
-.text__card {
-    margin-top: 15px;
-    font-size: 25px;
-
-  text-align: center;
-  color: #d19bc8;
-  word-break: break-all;
-
-}
-
-.to__do__mem .icon {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  background-repeat: no-repeat;
-  background-size: contain;
-  transition: transform 200ms ease-in-out;
-}
-
-.img__card {
-  width: 200px;
-  height: 200px;
-}
-
-.like__card {
-  background-image: url(../assets/icons/like.svg);
+  gap: 10px;
   margin-bottom: 20px;
- 
-
-
-  &:hover {
-    cursor: pointer;
-  }
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.delete__card {
-  background-image: url(../assets/icons/delete.png);
-  margin-top: 20px;
-  mix-blend-mode: multiply;
-  
-
-  
-
-  &:hover {
-    cursor: pointer;
-  }
+#add__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.liked {
-  transform: scale(1.2);
-  border-radius: 100px 100px 150px 150px;
-  background-color: #d19bc8;
+#input__img,
+#input__text {
+  width: 340px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
 
-  &:hover {
-    cursor: pointer;
-  }
+#input__img:focus,
+#input__text:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+#add__to__do {
+  width: 340px;
+  padding: 12px;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#add__to__do:hover {
+  background-color: #3700b3;
+  transform: translateY(-1px);
 }

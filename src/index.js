@@ -1,48 +1,37 @@
-import './styles/style.css';
+import "./styles/style.css";
+import { createCard } from "./modules/dom.js";
+import { openModal } from "./modules/modal.js";
+import { saveChanges } from "./modules/data.js";
 
-//добавление картинки
+//DOM карточки
+const formMem = document.querySelector("#formMem");
 const inputImg = document.querySelector("#input__img");
 const inputText = document.querySelector("#input__text");
-const addBtn = document.querySelector("#add__to__do");
 
-addBtn.addEventListener("click", () => {
+formMem.addEventListener("submit", (event) => {
+  event.preventDefault();
+
   if (inputImg.value.trim() !== "" && inputText.value.trim() !== "") {
     createCard(inputImg.value, inputText.value);
 
     inputImg.value = "";
     inputText.value = "";
+
+    formMem.reset();
   } else {
     alert("Введите задачу");
   }
 });
 
-const createCard = (img, text) => {
-  let pattern = document.querySelector("template");
-  let clone = pattern.content.cloneNode(true);
-  let todoMem = clone.querySelector(".to__do__mem");
-  let imgCard = todoMem.querySelector(".img__card");
-  let textCard = todoMem.querySelector(".text__card");
 
-  imgCard.src = img;
-  textCard.textContent = text;
+//модальное окно
+const editBtn = document.querySelector("#edit__to__do");
 
-  document.querySelector("body").appendChild(clone);
-  deleteCard(todoMem);
-  like(todoMem);
-};
-
-const like = (todoMem) => {
-  let likeCard = todoMem.querySelector(".like__card");
-  likeCard.addEventListener("click", () => {
-    likeCard.classList.toggle("liked");
-  });
-};
-
-const deleteCard = (todoMem) => {
-  let deleteCard = todoMem.querySelector(".delete__card");
-  deleteCard.addEventListener("click", () => {
-    todoMem.remove();
-  });
-};
-
-
+document.addEventListener("click", (event) => {
+  if (event.target.closest("#edit__to__do")) {
+    const card = event.target.closest(".to__do__mem");
+    openModal(card);
+    saveChanges();
+    event.preventDefault();
+  }
+});

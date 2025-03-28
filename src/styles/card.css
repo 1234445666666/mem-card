@@ -1,0 +1,89 @@
+/* стили для mem-card */
+.to__do__mem {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.img__card {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text__card {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #333;
+}
+
+#edit__to__do {
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #6200ea;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#edit__to__do:hover {
+  transform: scale(1.1);
+  background-color: #4a00c5;
+}
+
+.icon {
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: red;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.like__card {
+  color: #ccc;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.like__card.active {
+  font-size: 1.8rem;
+  transform: scale(1.2);
+}
+
+.like__card:hover {
+  transform: scale(1.2);
+}
+
+.delete__card {
+  font-size: 1.8rem;
+  color: black;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete__card:hover {
+  color: #ff4757;
+  transform: scale(1.2);
+}

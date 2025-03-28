@@ -1,0 +1,82 @@
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+#formModal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease;
+}
+
+#formModal label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #6200ea;
+}
+
+#formModal input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#formModal input:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+#change__to__do {
+  width: 100%;
+  padding: 12px;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#change__to__do:hover {
+  background-color: #3700b3;
+  transform: translateY(-1px);
+}
+
+.modal__close {
+  position: absolute;
+  top: 280px;
+  right: 700px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: black;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal__close:hover {
+  color: #6200ea;
+}

@@ -1,12 +1,15 @@
+/* Стили для header */
 header {
-    display: flex;
-    justify-content: center;
+    background-color: #6200ea;
+    color: white;
     padding: 20px;
     text-align: center;
-}
-
-h1 {
-    color: #D19BC8;
-    font-size: 100px;
-    font-weight: bold;
-}
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }

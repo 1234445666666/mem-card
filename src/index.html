@@ -10,24 +10,63 @@
     <header>
       <h1>mem cards</h1>
     </header>
-
     <main>
-      <div id="add__card">
-        <input  type="text" id="input__img" placeholder="Вставьте вашу ссылку на картинку" />
-        <input type="text" id="input__text" placeholder="Введите описание к картинке" maxlength="30" />
-        <button id="add__to__do">Добавить</button>
-      </div>
-    </main>
-<!-- шаблон карточки -->
-    <template>
-      <div class="to__do__mem">
-        <span class="icon like__card"></span>
-        <img class="img__card" src="" alt="" />
-        <span class="text__card"></span>
-        <span class="icon delete__card"></span>
-      </div>
-    </template>
+      <form id="formMem">
+        <label for="input__img"></label>
+        <input
+          type="text"
+          id="input__img"
+          placeholder="Введите URL изображения"
+          class="input__img"
+        />
+        <label for="input__text"></label>
+        <input
+          type="text"
+          id="input__text"
+          placeholder="Введите описание к картинке"
+          maxlength="30"
+          class="input__text"
+        />
+        <button id="add__to__do" type="submit">Добавить</button>
+      </form>
 
+      <!-- Контейнер для карточек -->
+      <div id="cards__container"></div>
+    </main>
   </body>
-  <script src="index.js"></script>
+  <!-- шаблон карточки -->
+  <template class="pattern">
+    <div class="to__do__mem">
+      <span class="icon like__card">❤️</span>
+      <img class="img__card" src="" alt="" />
+      <span class="text__card"></span>
+      <span class="icon delete__card">X</span>
+      <button id="edit__to__do" type="submit">Редактировать</button>
+    </div>
+  </template>
+  <!-- шаблон модального окна -->
+  <template id="modal__template">
+    <div class="modal">
+      <form id="formModal">
+        <span class="modal__close">x</span>
+        <h2>Редактирование карточки</h2>
+        <label for="change__img">Ссылка на новую картинку</label>
+        <input
+          type="text"
+          id="change__img"
+          placeholder="Введите URL изображения"
+        />
+        <label for="change__text">Новый текст</label>
+        <input
+          type="text"
+          id="change__text"
+          placeholder="Введите новый текст"
+          maxlength="30"
+        />
+        <button id="change__to__do">Применить изменения</button>
+      </form>
+    </div>
+  </template>
+
+  <script type="module" src="index.js"></script>
 </html>

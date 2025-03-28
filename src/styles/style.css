@@ -1,13 +1,47 @@
+/* Общие стили для всего документа */
+
 @import url(header.css);
 @import url(main.css);
-@import url(footer.css);
+@import url(card.css);
+@import url(modal.css);
 
-*{
-    padding: 0px;
-    margin:0px;
-    box-sizing: border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #05283A;
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+  #add__card {
+    flex-direction: column;
+  }
+
+  .to__do__mem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .img__card {
+    width: 100%;
+    height: auto;
+  }
 }

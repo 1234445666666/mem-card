@@ -23,11 +23,12 @@ npm run build
 
 ## Структура проекта
 ```
-/project-rootv
+/project-root
 │── dist/                  # Скомпилированные файлы
 │── node_modules/          # Установленные зависимости
 │── src/                   # Исходный код
-│   ├── assets/            # Ресурсы (изображения, иконки и т. д.)
+│   ├── assets/   
+│   │── modules/           # Модули
 │   ├── styles/            # CSS-стили
 │   ├── index.html         # Основной HTML-файл
 │   ├── index.js           # Главный JS-файл
